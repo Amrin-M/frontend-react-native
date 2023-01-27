@@ -1,33 +1,41 @@
-import React from 'react';
-import { View, Text, StyleSheet,Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Button } from 'react-native';
+
+
+function image(){
+
+}
 
 const CameraInfo = (props) => {
+    var clicked = true;
 
     return (
         <>
             <Text style={styles.welcomeText}>Welcome to the Home Screen!</Text>
             <View style={styles.outerrect}>
                 <View style={styles.innerrect1}>
-                <View style={styles.imageContainer}>
-                <Image
-                style={styles.image}
-                source={require('C:\Users\HP\firtproject\images\download.png')}></Image>
-                <Image
-                style={styles.image}
-                source={require('C:\Users\HP\firtproject\images\analyse.png')}></Image>
-                <Image
-                style={styles.image}
-                source={require('C:\Users\HP\firtproject\images\monitor.png')}></Image>
-                </View>
-                
+                    <View style={styles.imageContainer}>
+                        <Image
+                            style={styles.image}
+                            source={require('../../images/analyse.png')}></Image>
+                        <Image
+                            style={styles.image}
+                            source={require('../../images/analyse.png')}></Image>
+                        <Image
+                            style={styles.image}
+                            source={require('../../images/monitor.png')}></Image>
+                    </View>
+
                 </View>
                 <View style={styles.innerrect2}>
-                    <Text style={styles.btnText}>Take a picture</Text>
+                    <Button onClick={image()} title="Take a Picture">
+                        {clicked ? "Clicked!" : "Click me"}
+                    </Button>
+
                 </View>
             </View>
         </>
     );
-}
+};
 
 const styles = StyleSheet.create({
     welcomeText: {
@@ -66,20 +74,20 @@ const styles = StyleSheet.create({
         marginBottom: 2
     },
     btnText: {
-        fontSize:16,
-        marginTop:'auto',
-        marginBottom:'auto'
+        fontSize: 16,
+        marginTop: 'auto',
+        marginBottom: 'auto'
     },
-    imageContainer:{
-        flexDirection:'row'
+    imageContainer: {
+        flexDirection: 'row'
     },
     image:
     {
-        width:30,
-        height:26,
-        marginRight:10
+        width: 30,
+        height: 26,
+        marginRight: 10
     }
-  
+
 });
 
 export default CameraInfo;

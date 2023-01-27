@@ -1,6 +1,4 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { View, StyleSheet } from 'react-native';
 import BottomBar from '../components/BottomBar';
 import CameraInfo from '../components/CameraInfo';
 
