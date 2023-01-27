@@ -27,7 +27,7 @@ const CameraInfo = (props) => {
 
                 </View>
                 <View style={styles.innerrect2}>
-                    <Button onClick={image()} title="Take a Picture">
+                    <Button onClick={image()} title="Take a Picture of me">
                         {clicked ? "Clicked!" : "Click me"}
                     </Button>
 
