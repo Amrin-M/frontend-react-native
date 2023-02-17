@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image, Button } from 'react-native';
 
 
-function image(){
+function image() {
 
 }
 
@@ -10,24 +10,33 @@ const CameraInfo = (props) => {
 
     return (
         <>
-            <Text style={styles.welcomeText}>Welcome to the Home Screen!</Text>
+            <Text style={{fontWeight: 'bold',marginLeft:30,marginTop:50}}>New Analysis</Text>
+            <View style={styles.line} />
             <View style={styles.outerrect}>
                 <View style={styles.innerrect1}>
+                    <View style={{ flexDirection: 'row', alignItems:'center', justifyContent:'space-around' }}>
+                        <Text >Capture</Text>
+                        <Text>Analyse</Text>
+                        <Text>Monitor</Text></View>
                     <View style={styles.imageContainer}>
+
+                        <Image
+
+                            style={styles.image}
+                            source={require('../../images/download-removebg-preview.png')}></Image>
+
                         <Image
                             style={styles.image}
-                            source={require('../../images/analyse.png')}></Image>
+                            source={require('../../images/analyse-removebg-preview.png')}></Image>
+
                         <Image
                             style={styles.image}
-                            source={require('../../images/analyse.png')}></Image>
-                        <Image
-                            style={styles.image}
-                            source={require('../../images/monitor.png')}></Image>
+                            source={require('../../images/monitor-removebg-preview.png')}></Image>
                     </View>
 
                 </View>
-                <View style={styles.innerrect2}>
-                    <Button onClick={image()} title="Take a Picture of me">
+                <View >
+                    <Button style={styles.btnimage}  onClick={image()} title="Take a Picture" >
                         {clicked ? "Clicked!" : "Click me"}
                     </Button>
 
@@ -45,6 +54,12 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         alignSelf: 'center'
     },
+    line: {
+        width:320,
+        marginLeft:30,
+        borderBottomWidth: 2,
+        borderBottomColor: '#000'
+    },
     outerrect: {
         backgroundColor: '#DB9039',
         width: 333,
@@ -52,7 +67,8 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 235,
+        marginTop: 30,
+        marginBottom:80,
         marginLeft: 15
     },
     innerrect1: {
@@ -64,28 +80,37 @@ const styles = StyleSheet.create({
         marginBottom: 30,
 
     },
-    innerrect2: {
+   
+    btnimage: {
+
         backgroundColor: '#F5F5F5',
         width: 312,
         height: 35,
         borderRadius: 10,
         fontSize: 13,
         alignItems: 'center',
-        marginBottom: 2
+        marginBottom: 5,
+
     },
+
     btnText: {
         fontSize: 16,
         marginTop: 'auto',
         marginBottom: 'auto'
     },
     imageContainer: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        padding: 10,
+        justifyContent:'space-around',
+        alignContent:'center'
+       
+        
     },
     image:
     {
-        width: 30,
-        height: 26,
-        marginRight: 10
+        width: 35,
+        height: 30,
+       
     }
 
 });

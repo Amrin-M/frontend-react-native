@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { View,Text } from "react-native";
 import Home from './src/screens/Home';
+import camera from './src/screens/Camera'
 
 const Stack = createStackNavigator();
 
@@ -10,7 +10,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Camera" component={Home} />
+        <Stack.Screen name="Camera" component={camera} />
       </Stack.Navigator>
     </NavigationContainer>
   );
